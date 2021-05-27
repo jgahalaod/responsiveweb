@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #fbf2ef;
+        }
+        .nav{
+            border-bottom: 1px solid gray;
+            text-align: right;
+            height: 70px;
+            line-height: 70px;
+            background-color: rgba(41,41,41,1);
+
+        }
+        .menu{
+            margin: 0 30px 0 0 ;
+            clear: right;
+        }
+        .menu a{
+            margin: 0 30px;
+            text-decoration: none;
+            color: gray;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+        .contact{
+            background-color: #d3b9b2;
+            padding: 8px 16px;
+        }
+        label{
+            margin: 0 30px 0 0;
+            font-size: 30px;
+            display: none;
+            width: 30px;
+            float: right;
+            
+        }
+        #toggle{
+            display: none;
+        
+        }
+        h1{
+            text-align: center;
+            margin: 20px  ;
+            font-family: "Playfair Display";
+            font-weight: 400;
+            font-size: 40px;
+        }
+        section{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        section .section--info{
+            width: 50%;
+            height: 550px;
+            display: flex;
+            align-items: center;
+            background-color: #f0ecec;
+        }
+        section .section--info p{
+            font-size: 20px;
+            font-weight: 300;
+            font-family: Montserrat;
+            line-height: 35px;
+            padding:0 20px;
+            text-align: justify;
+        }
+        section .section--img{
+            width: 50%;
+            height: 550px;
+            position: relative;
+        }
+        .section--img::before{
+              content: "";
+              display: block;
+              background-color:#655a55;
+              opacity: .7;
+              width: 100%;
+              height:550px ;              
+              position: absolute;
+              top: 0;
+              left: 0;
+          }
+        section .section--img img{
+            width: 100%;
+            height: 100%;
+        }
+  
+        @media only screen and (max-width:500px) {
+         label{
+        display: block;
+        color: #d3b9b2;
+         }
+         .nav{
+             background-color: rgba(41,41,41,1);
+             position: relative;
+
+
+         }
+          .menu{
+              text-align:center;
+              width: 100%;
+              display: none;
+              transition: .3 all;
+              background-color:rgba(59,58,58,.9);
+              position: absolute;
+              top: 0;
+              right: 0;
+              margin: 70px 0 0 0;
+              z-index: 2;
+              
+          }
+          .section--img::before{
+              content: "";
+              display: block;
+              background-color:#655a55;
+              opacity: .7;
+              width: 100%;
+              height:327px ;              
+              position: absolute;
+              top: 0;
+              left: 0;
+          }
+          .menu a{
+            display: block;
+            border-bottom: 1px solid gray;
+            margin: 0;
+            font-size: 24px;
+            cursor: pointer;
+            color:#dddddd;
+            padding: 0 20px 0 0 ;
+            text-transform:uppercase;
+            text-align:inherit;
+
+          }
+          .contact{
+            background-color: #d3b9b2;
+
+          }
+          
+          #toggle:checked + .menu{
+             display: block;
+             transition: .3 all;
+
+          }
+          h1{
+              color: #3f3f3f;
+              position: relative;
+              z-index: -1;
+              font-size: 30px;
+             
+          }
+          section{
+              background-color: #ecf0f1;
+              display: block;
+          }
+          section .section--info{
+              display: block;
+              width: 100%;
+              height: auto;
+              margin: auto;
+              text-align:justify;
+              padding: 20px 10px;
+
+
+          }
+          section .section--img{
+              display: block;
+              width: 100%;
+              height: auto;
+              margin: auto;
+              object-fit: cover;
+              position: relative;
+          }
+          
+          section .section--img img{
+              width: 100%;
+              height: auto;
+              /* padding: 10px; */
+              /* object-fit: cover; */
+              
+          }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#" class="contact"><span>Contact</span></a>
+        </div>
+    </div>
+    <h1>Welcome to the world of CSS</h1>
+    <section>
+             <div class="section--img">
+            <img src="img/img2/Camera background.jpeg" alt="">
+        </div>
+        <div class="section--info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque qui pariatur sed laudantium nam aperiam explicabo quos excepturi. Ipsam, hic illum unde quia ipsa distinctio numquam odio cumque vitae harum fugiat magni quis expedita, nesciunt eum facilis. Assumenda, fugiat excepturi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nesciunt dolorum, fuga molestias voluptate ratione illum nostrum rerum ad. Consectetur rem optio, sit obcaecati tempore iusto tempora id nisi rerum.<br/> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda officiis ullam laborum amet? Aspernatur eius velit hic illum excepturi modi at odit! Praesentium laudantium quo harum veniam iure laboriosam neque! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae molestias libero ducimus provident ex tempora, incidunt nisi quia blanditiis iusto consequatur, eaque repellat! Quia nemo, impedit eum modi quis corrupti.</p>
+        </div>
+    </section>
+</body>
+</html>
